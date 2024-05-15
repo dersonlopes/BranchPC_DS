@@ -27,9 +27,14 @@ public class UserService {
 		return obj.get();
 		
 	}
-	
+// incluir novo usuario
 	public User insert(User obj) {
 		return repository.save(obj);
+	}
+
+// Deletar um usuario por id
+	public void delete (Long id) {
+		repository.deleteById(id);
 	}
 
 }
